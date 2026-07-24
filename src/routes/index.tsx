@@ -560,7 +560,8 @@ function Process() {
   );
 }
 
-function Portfolio() {
+function PortfolioSection() {
+
   const shot = (url: string) => `https://image.thum.io/get/width/1200/crop/800/${url}`;
   const favicon = (url: string) => `https://www.google.com/s2/favicons?domain=${new URL(url).hostname}&sz=64`;
 

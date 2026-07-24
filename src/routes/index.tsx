@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       }),
     }],
   }),
-  component: Portfolio,
+  component: Portfolio_,
 });
 
 const CALENDLY = "https://calendly.com/marketingwithharak/30min";

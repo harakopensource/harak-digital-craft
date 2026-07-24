@@ -955,7 +955,7 @@ function Portfolio_() {
         <Skills />
         <Services />
         <Process />
-        <Portfolio />
+        <PortfolioSection />
         <Testimonials />
         <FAQ />
         <CTA />
@@ -968,5 +968,5 @@ function Portfolio_() {
   );
 }
 
-// Rename export to match Route
-function Portfolio() { return <Portfolio_ />; }
+
+

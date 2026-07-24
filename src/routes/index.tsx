@@ -878,7 +878,7 @@ function BackToTop({ show }: { show: boolean }) {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/"
+      href="https://wa.me/918360998950"
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp"

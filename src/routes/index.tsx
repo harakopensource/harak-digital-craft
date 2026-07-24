@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       { title: "Harak — Full Stack Web Developer & Digital Marketing Expert" },
       { name: "description", content: "Harak: Full Stack Web Developer, WordPress Expert & Digital Marketing Expert. Building modern websites that drive business growth. 5+ years experience, 100+ projects." },
       { property: "og:title", content: "Harak — Full Stack Web Developer & Digital Marketing Expert" },
-      { property: "og:description", content: "Building modern websites that drive business growth." },
+      { property: "og:description", content: "Harak: Full Stack Web Developer, WordPress Expert & Digital Marketing Expert. Building modern websites that drive business growth. 5+ years experience, 100+ projects." },
     ],
     scripts: [{
       type: "application/ld+json",

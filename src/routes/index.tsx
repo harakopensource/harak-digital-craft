@@ -119,11 +119,11 @@ const FAQS = [
 ];
 
 const SOCIALS = [
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Facebook, label: "Facebook", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/marketingwithharak/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/marketingwithharak/" },
+  { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@Marketing-with-harak" },
+  { icon: Github, label: "GitHub", href: "https://github.com/harakopensource" },
+  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/918360998950" },
 ];
 
 // ---------------- Components ----------------

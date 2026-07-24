@@ -413,8 +413,8 @@ function About() {
           <Reveal>
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute -inset-4 gradient-primary rounded-3xl blur-2xl opacity-30" />
-              <div className="relative h-full w-full rounded-3xl glass-strong overflow-hidden flex items-center justify-center">
-                <div className="text-[12rem] font-display font-bold gradient-text">H</div>
+              <div className="relative h-full w-full rounded-3xl glass-strong overflow-hidden">
+                <img src={harakPhoto.url} alt="Harak — Full Stack Web Developer & Digital Marketing Expert" className="h-full w-full object-cover" loading="lazy" />
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}

@@ -3,10 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, ArrowUp, Calendar, Code2, Rocket, Search, Sparkles, Zap, Menu, X,
-  Github, Linkedin, Facebook, Instagram, MessageCircle, Mail, Phone, MapPin,
+  Github, Linkedin, Instagram, Youtube, MessageCircle, Mail, Phone, MapPin,
   CheckCircle2, Star, ExternalLink, Download, Briefcase, Users, Award, Target,
-  Palette, TrendingUp, Shield, Clock, Heart, ChevronDown, Send,
+  Palette, TrendingUp, Shield, Clock, Heart, ChevronDown,
 } from "lucide-react";
+import harakPhoto from "@/assets/harak.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -118,11 +119,11 @@ const FAQS = [
 ];
 
 const SOCIALS = [
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
-  { icon: Facebook, label: "Facebook", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/marketingwithharak/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/marketingwithharak/" },
+  { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@Marketing-with-harak" },
+  { icon: Github, label: "GitHub", href: "https://github.com/harakopensource" },
+  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/918360998950" },
 ];
 
 // ---------------- Components ----------------
@@ -412,8 +413,8 @@ function About() {
           <Reveal>
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute -inset-4 gradient-primary rounded-3xl blur-2xl opacity-30" />
-              <div className="relative h-full w-full rounded-3xl glass-strong overflow-hidden flex items-center justify-center">
-                <div className="text-[12rem] font-display font-bold gradient-text">H</div>
+              <div className="relative h-full w-full rounded-3xl glass-strong overflow-hidden">
+                <img src={harakPhoto.url} alt="Harak — Full Stack Web Developer & Digital Marketing Expert" className="h-full w-full object-cover" loading="lazy" />
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
@@ -740,105 +741,78 @@ function CTA() {
 }
 
 function Contact() {
-  const [sent, setSent] = useState(false);
   return (
     <section id="contact" className="relative py-24 px-4 sm:px-6">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading tag="Contact" title="Let's Work Together" subtitle="Tell me about your project and I'll respond within 24 hours." />
-        <div className="grid lg:grid-cols-5 gap-8">
+      <div className="mx-auto max-w-5xl">
+        <SectionHeading tag="Contact" title="Let's Work Together" subtitle="Reach out directly — I'll respond within 24 hours." />
+        <div className="grid md:grid-cols-2 gap-6">
           <Reveal>
-            <div className="lg:col-span-2 space-y-4">
-              <div className="glass rounded-2xl p-6">
-                <div className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-4">Contact Info</div>
-                <div className="space-y-4">
-                  <a href="mailto:hello@harak.dev" className="flex items-center gap-3 text-sm hover:text-primary transition-colors">
-                    <div className="h-10 w-10 rounded-xl glass-strong flex items-center justify-center"><Mail className="h-4 w-4 text-primary" /></div>
-                    hello@harak.dev
-                  </a>
-                  <a href="tel:+000" className="flex items-center gap-3 text-sm hover:text-primary transition-colors">
-                    <div className="h-10 w-10 rounded-xl glass-strong flex items-center justify-center"><Phone className="h-4 w-4 text-primary" /></div>
-                    Available on request
-                  </a>
-                  <div className="flex items-center gap-3 text-sm">
-                    <div className="h-10 w-10 rounded-xl glass-strong flex items-center justify-center"><MapPin className="h-4 w-4 text-primary" /></div>
-                    Working with clients globally
+            <div className="glass-strong rounded-2xl p-6 sm:p-8 h-full">
+              <div className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-6">Contact Info</div>
+              <div className="space-y-5">
+                <a href="tel:+918360998950" className="flex items-center gap-4 group">
+                  <div className="h-12 w-12 rounded-xl glass flex items-center justify-center shrink-0 group-hover:gradient-primary transition-all">
+                    <Phone className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Mobile</div>
+                    <div className="text-base font-semibold group-hover:text-primary transition-colors">+91 83609-98950</div>
+                  </div>
+                </a>
+                <a href="mailto:info@haral.dev.com" className="flex items-center gap-4 group">
+                  <div className="h-12 w-12 rounded-xl glass flex items-center justify-center shrink-0 group-hover:gradient-primary transition-all">
+                    <Mail className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
+                    <div className="text-base font-semibold group-hover:text-primary transition-colors">info@haral.dev.com</div>
+                  </div>
+                </a>
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-xl glass flex items-center justify-center shrink-0">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Location</div>
+                    <div className="text-base font-semibold">Working with clients globally</div>
                   </div>
                 </div>
               </div>
-              <div className="glass rounded-2xl p-6">
-                <div className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-4">Connect</div>
-                <div className="flex flex-wrap gap-2">
-                  {SOCIALS.map((s) => (
-                    <a
-                      key={s.label}
-                      href={s.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={s.label}
-                      className="h-11 w-11 rounded-xl glass-strong flex items-center justify-center hover:gradient-primary hover:text-primary-foreground transition-all"
-                    >
-                      <s.icon className="h-4 w-4" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <a href={CALENDLY} target="_blank" rel="noreferrer" className="block glass rounded-2xl p-6 hover-lift">
-                <div className="flex items-center gap-3 mb-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  <div className="font-display font-bold">Book a Free Call</div>
-                </div>
-                <p className="text-sm text-muted-foreground">30-minute strategy call — no strings attached.</p>
+              <a href={CALENDLY} target="_blank" rel="noreferrer" className="mt-8 flex items-center gap-3 rounded-xl gradient-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground hover-lift">
+                <Calendar className="h-4 w-4" /> Book a Free Call
               </a>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-              className="lg:col-span-3 glass-strong rounded-2xl p-6 sm:p-8 space-y-4"
-            >
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input label="Full Name" name="name" />
-                <Input label="Email Address" name="email" type="email" />
-                <Input label="Phone Number" name="phone" />
-                <Input label="Company Name" name="company" />
-                <Input label="Project Type" name="type" />
-                <Input label="Budget" name="budget" />
+            <div className="glass-strong rounded-2xl p-6 sm:p-8 h-full">
+              <div className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-6">Let's Connect on Social Media</div>
+              <div className="space-y-3">
+                {SOCIALS.filter((s) => s.label !== "WhatsApp").map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-4 glass rounded-xl p-4 hover-lift group"
+                  >
+                    <div className="h-11 w-11 rounded-xl glass-strong flex items-center justify-center shrink-0 group-hover:gradient-primary transition-all">
+                      <s.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-semibold">{s.label}</div>
+                      <div className="text-xs text-muted-foreground truncate">
+                        {s.href.replace(/^https?:\/\//, "")}
+                      </div>
+                    </div>
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </a>
+                ))}
               </div>
-              <div>
-                <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">Message</label>
-                <textarea
-                  rows={5}
-                  required
-                  className="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-ring outline-none transition-all"
-                  placeholder="Tell me about your project…"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={sent}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover-lift disabled:opacity-70"
-              >
-                {sent ? (<><CheckCircle2 className="h-4 w-4" /> Message Sent</>) : (<>Send Message <Send className="h-4 w-4" /></>)}
-              </button>
-            </form>
+            </div>
           </Reveal>
         </div>
       </div>
     </section>
-  );
-}
-
-function Input({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
-  return (
-    <div>
-      <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">{label}</label>
-      <input
-        type={type}
-        name={name}
-        required
-        className="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-ring outline-none transition-all"
-      />
-    </div>
   );
 }
 
@@ -904,7 +878,7 @@ function BackToTop({ show }: { show: boolean }) {
 function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/"
+      href="https://wa.me/918360998950"
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp"

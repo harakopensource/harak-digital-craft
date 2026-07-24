@@ -3,10 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import {
   ArrowRight, ArrowUp, Calendar, Code2, Rocket, Search, Sparkles, Zap, Menu, X,
-  Github, Linkedin, Facebook, Instagram, MessageCircle, Mail, Phone, MapPin,
+  Github, Linkedin, Instagram, Youtube, MessageCircle, Mail, Phone, MapPin,
   CheckCircle2, Star, ExternalLink, Download, Briefcase, Users, Award, Target,
-  Palette, TrendingUp, Shield, Clock, Heart, ChevronDown, Send,
+  Palette, TrendingUp, Shield, Clock, Heart, ChevronDown,
 } from "lucide-react";
+import harakPhoto from "@/assets/harak.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

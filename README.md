@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to your My Portfolio
 
 This project was built with [Lovable](https://lovable.dev).
 
